@@ -9,3 +9,4 @@ export class Ang2DirectoryPage {
     return element(by.css('app-root h1')).getText();
   }
 }
+  
