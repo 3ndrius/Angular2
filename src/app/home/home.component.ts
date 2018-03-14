@@ -7,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
  homeTitle = "Welcome to homepage !";
+ myStr = "Type your text";
+ boolean = "true";
+
+alertMe(par1) {
+  alert(par1);
+}
+student = {
+  name: "John",
+  age: "19"
+};
   constructor() { }
 
   ngOnInit() {

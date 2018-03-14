@@ -1,5 +1,30 @@
 <p>
 {{homeTitle}}
 </p>
+
+<input type="text" value={{myStr}}/>
+<input type="text" required="{{boolean}}"/>
+
+<button (click)="alertMe('Function parametr string')">Click</button>
+
+
+<br>
+<br>
+<label for="name">Name:</label>
+<input [(ngModel)]="student.name" id="name" />
+<label for="age">Age:</label>
+<input [(ngModel)]="student.age" id="age"/>
+<p>{{student.name}}</p>
+<p>{{student.age}}</p>
+
+
+
+
+
+
+
+
+
+
 <!-- directives -->
 <!-- <ng-content></ng-content> -->
