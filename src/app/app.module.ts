@@ -5,16 +5,32 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { DirectoryComponent } from './directory/directory.component';
+import { RouterModule, Routes } from '@angular/router';
+
+
+const appRoutes: Routes = [
+  {path: 'directory', component: DirectoryComponent},
+  {path: '', component: HomeComponent}
+];
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    DirectoryComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(
+      appRoutes
+
+    )
+    
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
