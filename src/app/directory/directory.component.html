@@ -1,7 +1,54 @@
+<h2>
+  Student List</h2>
 
+<ul id="student-list">
+  <li *ngFor="let student of students ">
+    <div class="single-student">
+      <span [ngStyle]="{color:green}"> {{student.name}}</span>
+      <span [ngStyle]="{color:red}"> {{student.age}}</span>
+     
+    </div>
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
 <p [ngClass]="classes"> directory works!</p>
 
 <p *ngIf="test"> Only show if is true</p>
+
+
+
+
+
+
+
+
+
 
 
 <style>
@@ -18,7 +65,7 @@
 </style>
 
 
-
+ -->
 
 
 

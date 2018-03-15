@@ -10,11 +10,14 @@ export class DirectoryComponent implements OnInit {
 
   classes = {'blue':false, 'red':true, 'underline': false};
   test = true;
+
+  students=[
+    {name: "John", age:22},
+    {name: "Mark", age:32},
+    {name: "Teresa", age:55}
+  ];
   // ninjas: string;
-  constructor() { 
-    //private route: ActivatedRoute
-    // this.ninjas = route.snapshot.params['ninjas'];
-  }
+  constructor() { }
 
   ngOnInit() {
   }
