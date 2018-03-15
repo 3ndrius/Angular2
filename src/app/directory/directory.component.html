@@ -1,5 +1,31 @@
-<p>
-  directory works!
-</p>
 
-<p>{{ninjas}}</p>
+<p [ngClass]="classes"> directory works!</p>
+
+<p *ngIf="test"> Only show if is true</p>
+
+
+<style>
+  .blue{
+    color:blue;
+  }
+
+  .red{
+    color:red;
+  }
+  .underline{
+    text-decoration: underline;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <p>{{ninjas}}</p> -->

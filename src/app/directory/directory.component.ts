@@ -8,10 +8,12 @@ import {ActivatedRoute } from '@angular/router';
 })
 export class DirectoryComponent implements OnInit {
 
-  ninjas: string;
-  constructor(private route: ActivatedRoute) { 
-
-    this.ninjas = route.snapshot.params['ninjas'];
+  classes = {'blue':false, 'red':true, 'underline': false};
+  test = true;
+  // ninjas: string;
+  constructor() { 
+    //private route: ActivatedRoute
+    // this.ninjas = route.snapshot.params['ninjas'];
   }
 
   ngOnInit() {
