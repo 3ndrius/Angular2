@@ -1,10 +1,15 @@
 <h2>
   Student List</h2>
 
-<ul id="student-list">
-  <li *ngFor="let student of students ">
+<form id="filter">
+  <label for="search">Search input</label>
+  <input type="text" id="search" [(ngModel)]="term" [ngModelOptions]="{standalone: true}"/>
+</form>
+
+  <ul id="student-list">
+  <li *ngFor="let student of students | filter:term">
     <div class="single-student">
-      <span [ngStyle]="{color:green}"> {{student.name}}</span>
+      <span [ngStyle]="{color:green}"> {{student.name }}</span>
       <span [ngStyle]="{color:red}"> {{student.age}}</span>
      
     </div>
