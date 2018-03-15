@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-directory',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectoryComponent implements OnInit {
 
-  constructor() { }
+  ninjas: string;
+  constructor(private route: ActivatedRoute) { 
+
+    this.ninjas = route.snapshot.params['ninjas'];
+  }
 
   ngOnInit() {
   }

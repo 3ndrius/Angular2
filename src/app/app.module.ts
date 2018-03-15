@@ -10,7 +10,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 const appRoutes: Routes = [
-  {path: 'directory', component: DirectoryComponent},
+  {path: 'directory/:ninjas', component: DirectoryComponent},
   {path: '', component: HomeComponent}
 ];
 
