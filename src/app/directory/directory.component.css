@@ -1,0 +1,25 @@
+body {
+
+}
+li{
+    list-style-type: none;
+}
+.color{
+    background-color: rgb(50, 114, 114);
+    padding: 10px 20px;
+    color:whitesmoke;
+    margin-right: 20px;
+
+}
+.color:nth-child(n+2){
+    background-color: rgb(212, 69, 69);
+}
+.single-student{
+    padding:15px 20px;
+}
+.filter{
+    padding: 10px;
+    background-color: rgb(164, 168, 168);
+    color:whitesmoke;
+    text-transform: uppercase;
+}

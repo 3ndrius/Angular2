@@ -41,4 +41,8 @@ export class DirectoryComponent implements OnInit {
     })
   }
 
+  fbPostData(name, age){
+    firebase.database().ref('/').push({name:name, age:age});
+  } 
+
 }

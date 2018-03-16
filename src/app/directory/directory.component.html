@@ -1,22 +1,30 @@
 <h2>
   Student List</h2>
 
-<form id="filter">
-  <label for="search">Search input</label>
-  <input type="text" id="search" [(ngModel)]="term" [ngModelOptions]="{standalone: true}"/>
-</form>
+<div class="filter">
+  <form id="filter">
+    <label for="search">Search input</label>
+    <input type="text" id="search" [(ngModel)]="term" [ngModelOptions]="{standalone: true}"/>
+  </form>
+</div>
 
   <ul id="student-list">
   <li *ngFor="let student of students | filter:term">
     <div class="single-student">
-      <span [ngStyle]="{color:green}"> {{student.name }}</span>
-      <span [ngStyle]="{color:red}"> {{student.age}}</span>
+      <span class="color"> {{student.name }}</span>
+      <span class="color"> {{student.age}}</span>
      
     </div>
   </li>
 </ul>
 
-<button (click) ="logIt()"> Click </button>
+<form  id="student-add" >
+  <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}"/>
+  <input type="text" [(ngModel)]= "age" [ngModelOptions]="{standalone: true}" />
+  <button (click) ="fbPostData( name,age )"> Add new student </button>
+</form>
+
+
 
 
 
