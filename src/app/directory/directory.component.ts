@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute } from '@angular/router';
 import {LoggingService} from '../logging.service';
+import {DataService} from '../data.service';
 
 @Component({
   selector: 'app-directory',
   templateUrl: './directory.component.html',
-  styleUrls: ['./directory.component.css']
+  styleUrls: ['./directory.component.css'],
+  providers:[DataService]
 
 })
 export class DirectoryComponent implements OnInit {
@@ -13,19 +15,18 @@ export class DirectoryComponent implements OnInit {
   classes = {'blue':false, 'red':true, 'underline': false};
   test = true;
 
-  students=[
-    {name: "John", age:22},
-    {name: "Mark", age:32},
-    {name: "Teresa", age:55}
-  ];
+  students=[];
   // ninjas: string;
-  constructor(private logger: LoggingService) { }
+  constructor(private logger: LoggingService, private dataService: DataService) { }
   
   logIt() {
     this.logger.log();
   }
 
   ngOnInit() {
+    this.dataService.fetchData().subscribe(
+      (data) => this.students = data
+    );
   }
 
 }
