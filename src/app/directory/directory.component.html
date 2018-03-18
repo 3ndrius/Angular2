@@ -3,7 +3,7 @@
 
 <div class="filter">
   <form id="filter">
-    <label for="search">Search input </label>
+    <label for="search">Search: </label>
     <input type="text" id="search" [(ngModel)]="term" [ngModelOptions]="{standalone: true}" placeholder="Type here"/>
   </form>
 </div>
@@ -21,7 +21,7 @@
 <form  id="student-add" >
   <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" placeholder="ex.name"/>
   <input type="text" [(ngModel)]= "age" [ngModelOptions]="{standalone: true}" placeholder="ex.age"/>
-  <button (click) ="fbPostData( name,age )"> Add new student </button>
+  <button (click) ="fbPostData( name,age )"> New student </button>
 </form>
 
 

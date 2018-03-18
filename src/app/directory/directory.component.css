@@ -12,18 +12,18 @@ li{
 
 }
 .color:nth-child(n+2){
-    background-color: rgb(212, 69, 69);
+    background-color: rgb(187, 69, 69);
 }
 .single-student{
     padding:15px 20px;
 }
 .filter{
     padding: 15px;
-    background-color: rgb(164, 168, 168);
+    background-color: rgb(163, 177, 177);
     color:whitesmoke;
     text-transform: uppercase;
     
 }
 #search{
-    margin-left: 10px;;
+    margin-left: 12px;;
 }
